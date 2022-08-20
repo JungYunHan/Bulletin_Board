@@ -25,7 +25,7 @@ function App() {
               />
               <Route path='/boards/:id' element={<BoardDetail />} />
               <Route path='/create' element={<CreateBoard />} />
-              <Route path='/edit' element={<EditBoard />} />
+              <Route path='/edit/:id' element={<EditBoard />} />
             </Routes>
           </Suspense>
         </div>

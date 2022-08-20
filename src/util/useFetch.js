@@ -16,7 +16,6 @@ const useFetch = (url) => {
         })
         .catch((err) => {
           setIsPending(false);
-          alert(err.message);
         });
     }, 1000);
   }, [url]);
