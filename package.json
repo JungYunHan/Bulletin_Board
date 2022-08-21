@@ -18,7 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://jungyunhan.github.io/Bulletin_Board",
+  "homepage": "https://jungyunhan.github.io/Bulletin_Board/public",
   "eslintConfig": {
     "extends": [
       "react-app",
