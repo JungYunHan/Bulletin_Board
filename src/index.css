@@ -1,5 +1,11 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #bea5a9;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +16,147 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  border-bottom: 1px solid #f2f2f2;
+  background-color: #574145;
+}
+
+.navbar h1 {
+  color: #ffc0cb;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.links a {
+  color: #53222e;
+  background-color: #ffc0cb;
+  border-radius: 8px;
+}
+
+.content {
+  max-width: 600px;
+  margin: 70px auto;
+  padding: 20px;
+  min-height: 100%;
+}
+
+/* board list */
+.board-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid gainsboro;
+}
+
+.board-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.board-preview h2 {
+  font-size: 20px;
+  color: #53222e;
+  margin-bottom: 8px;
+}
+
+.board-preview span {
+  font-size: 15px;
+  color: #53222e;
+  margin-right: 20px;
+  margin-bottom: 8px;
+}
+
+.board-preview a {
+  text-decoration: none;
+}
+
+/* board detail */
+.board-details {
+  margin-top: 20px;
+}
+
+.board-details h2 {
+  font-size: 25px;
+  color: #53222e;
+  margin-bottom: 10px;
+}
+
+.board-details div {
+  margin: 20px 0;
+  font-size: 20px;
+  color: #53222e;
+}
+
+.board-details span {
+  color: #53222e;
+  margin-right: 20px;
+  margin-bottom: 8px;
+}
+
+.board-details a {
+  text-decoration: none;
+  color: #53222e;
+}
+
+.board-details button {
+  background: #ffc0cb;
+  color: #53222e;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* create */
+.create {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create h2 {
+  font-size: 20px;
+  color: #53222e;
+  margin-bottom: 30px;
+}
+
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.create button {
+  background: #ffc0cb;
+  color: #53222e;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }

@@ -7,8 +7,8 @@ const BoardList = ({ boards }) => {
         <div className='board-preview' key={board.id}>
           <Link to={`/boards/${board.id}`}>
             <h2>{board.title}</h2>
-            <p>작성 시간: {board.createdAt}</p>
-            <p>작성자: {board.author}</p>
+            <span>작성자: {board.author}</span>
+            <span>작성 시간: {board.createdAt}</span>
           </Link>
         </div>
       ))}

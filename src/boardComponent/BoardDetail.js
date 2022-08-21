@@ -26,13 +26,15 @@ const BoardDetail = () => {
       {board && (
         <article>
           <h2>{board.title}</h2>
-          <p>작성 시간 {board.createdAt}</p>
-          <p>작성자 {board.author}</p>
+          <span>작성자 {board.author}</span>
+          <span>작성 시간 {board.createdAt}</span>
           <div>{board.body}</div>
           <button className='links'>
             <Link to={`/edit/${board.id}`}>게시글 수정</Link>
           </button>
-          <button onClick={handleDeleteClick}>delete</button>
+          <button className='links' onClick={handleDeleteClick}>
+            delete
+          </button>
         </article>
       )}
     </div>
