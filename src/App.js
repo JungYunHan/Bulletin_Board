@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import useFetch from './util/useFetch';
 
 const Main = React.lazy(() => import('./Main'));
@@ -12,25 +12,23 @@ const EditBoard = React.lazy(() => import('./boardComponent/EditBoard'));
 function App() {
   const { data, isPending } = useFetch(`http://localhost:3001/boards`);
   return (
-    <BrowserRouter>
-      <div className='App'>
-        <Navbar />
-        <div className='content'>
-          <Suspense fallback={<Loading />}>
-            <Routes>
-              <Route
-                exact
-                path='/'
-                element={<Main boards={data} isPending={isPending} />}
-              />
-              <Route path='/boards/:id' element={<BoardDetail />} />
-              <Route path='/create' element={<CreateBoard />} />
-              <Route path='/edit/:id' element={<EditBoard />} />
-            </Routes>
-          </Suspense>
-        </div>
+    <div className='App'>
+      <Navbar />
+      <div className='content'>
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route
+              exact
+              path='/'
+              element={<Main boards={data} isPending={isPending} />}
+            />
+            <Route path='/boards/:id' element={<BoardDetail />} />
+            <Route path='/create' element={<CreateBoard />} />
+            <Route path='/edit/:id' element={<EditBoard />} />
+          </Routes>
+        </Suspense>
       </div>
-    </BrowserRouter>
+    </div>
   );
 }
 
